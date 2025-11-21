@@ -14,7 +14,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
     />
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Google Tag Manager (head) -->
 
 @if (!empty(env('GTM_ID')))
@@ -331,7 +331,158 @@
     </div>
 </header>
 
-        <main class="flex-grow">@yield('content')</main>
+        <main class="flex-grow">
+            @if(session('error'))
+                <div class="bg-red-500 text-white p-3 rounded mb-4">
+                    {{ session('error') }}
+                </div>
+            @endif
+
+            @if(session('success'))
+                <div class="bg-green-500 text-white p-3 rounded mb-4">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            @if($errors->any())
+                <div class="bg-red-500 text-white p-3 rounded mb-4">
+                    Please fix the errors below.
+                </div>
+            @endif
+
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+
+                        // SUCCESS ALERT
+                        @if(session('success'))
+                        Swal.fire({
+                            title: "Success!",
+                            text: "{{ session('success') }}",
+                            icon: "success",
+                            confirmButtonColor: "#3085d6",
+                            confirmButtonText: "OK"
+                        });
+                        @endif
+
+                        // ERROR ALERT
+                        @if(session('error'))
+                        Swal.fire({
+                            title: "Error!",
+                            text: "{{ session('error') }}",
+                            icon: "error",
+                            confirmButtonColor: "#d33",
+                            confirmButtonText: "Retry"
+                        });
+                        @endif
+
+                        // FORM VALIDATION ERRORS
+                        @if ($errors->any())
+                        Swal.fire({
+                            title: "Please Fix the Errors",
+                            html: `
+            <ul style='text-align:left'>
+                @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                @endforeach
+                            </ul>
+`,
+                            icon: "warning",
+                            confirmButtonColor: "#f6ad55",
+                        });
+                        @endif
+
+                    });
+                </script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+
+                        // SUCCESS ALERT
+                        @if(session('success'))
+                        Swal.fire({
+                            title: "Success!",
+                            text: "{{ session('success') }}",
+                            icon: "success",
+                            confirmButtonColor: "#3085d6",
+                            confirmButtonText: "OK"
+                        });
+                        @endif
+
+                        // ERROR ALERT
+                        @if(session('error'))
+                        Swal.fire({
+                            title: "Error!",
+                            text: "{{ session('error') }}",
+                            icon: "error",
+                            confirmButtonColor: "#d33",
+                            confirmButtonText: "Retry"
+                        });
+                        @endif
+
+                        // FORM VALIDATION ERRORS
+                        @if ($errors->any())
+                        Swal.fire({
+                            title: "Please Fix the Errors",
+                            html: `
+            <ul style='text-align:left'>
+                @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                @endforeach
+                            </ul>
+`,
+                            icon: "warning",
+                            confirmButtonColor: "#f6ad55",
+                        });
+                        @endif
+
+                    });
+                </script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+
+                        // SUCCESS ALERT
+                        @if(session('success'))
+                        Swal.fire({
+                            title: "Success!",
+                            text: "{{ session('success') }}",
+                            icon: "success",
+                            confirmButtonColor: "#3085d6",
+                            confirmButtonText: "OK"
+                        });
+                        @endif
+
+                        // ERROR ALERT
+                        @if(session('error'))
+                        Swal.fire({
+                            title: "Error!",
+                            text: "{{ session('error') }}",
+                            icon: "error",
+                            confirmButtonColor: "#d33",
+                            confirmButtonText: "Retry"
+                        });
+                        @endif
+
+                        // FORM VALIDATION ERRORS
+                        @if ($errors->any())
+                        Swal.fire({
+                            title: "Please Fix the Errors",
+                            html: `
+            <ul style='text-align:left'>
+                @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                @endforeach
+                            </ul>
+`,
+                            icon: "warning",
+                            confirmButtonColor: "#f6ad55",
+                        });
+                        @endif
+
+                    });
+                </script>
+
+                @yield('content')
+        </main>
         <!-- 10. Footer & Contact - Switched to anchor dark section -->
 <footer id="contact" class="bg-accent-dark border-t border-slate-700 text-slate-200 dark:bg-primary-dark-bg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
