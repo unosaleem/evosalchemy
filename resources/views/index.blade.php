@@ -607,16 +607,12 @@
                     </label>
 
                     <!-- Submit Button -->
-                    <!-- <button type="submit"
-                     class="w-full py-3 text-lg font-semibold text-white bg-black rounded-xl border-2 border-yellow-600 hover:bg-yellow-600 hover:text-black transition-all duration-300">
-                 Submit
-             </button>-->
+                     <button type="submit"
+                     class="inline-block px-10 py-3 bg-accent-gold text-white font-semibold rounded-2xl shadow-lg hover:bg-yellow-500 hover:text-gray-900 transition duration-300 animate-[float_3s_ease-in-out_infinite]">
+                 Schedule My Visit
+             </button>
 
-                    <a type="submit"
-                        class="inline-block px-10 py-3 bg-accent-gold text-white font-semibold rounded-2xl shadow-lg hover:bg-yellow-500 hover:text-gray-900 transition duration-300 animate-[float_3s_ease-in-out_infinite]"
-                    >
-                        Schedule My Visit
-                    </a>
+
                 </form>
             </div>
 
@@ -1031,6 +1027,7 @@
                 <!-- Duplicated Priority Form (Needs unique IDs, but keeping original for simplicity) -->
 
                 <form class="lead-form space-y-5" data-form-name="modal_call_form" action="{{ route('lead.submit') }}" method="POST">
+                    @csrf
                     <input type="hidden" name="Remark"  value="Request Price & Availability | Book a Personal Consultation ">
                     <div
                             class="flex items-center border rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-yellow-500 transition"
