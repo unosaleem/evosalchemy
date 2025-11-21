@@ -209,22 +209,32 @@
         <form id="mobile-enquiry-form" action="{{ route('lead.submit') }}"  method="POST" class="space-y-4">
             @csrf
 
-            <input type="text" placeholder="Full Name" name="Name" required minlength="3"
+            <input type="text" placeholder="Full Name *" name="Name" required minlength="3"
                                 maxlength="50"
                                 onkeypress="return /^[a-zA-Z ]+$/i.test(event.key)"
                 class="w-full px-5 mb-3 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white">
 
-            <input type="email" placeholder="Email Address" name="Email"
+            <input type="email" placeholder="Email Address *" name="Email"
                 class="w-full mb-3 px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white">
 
-            <input type="tel" placeholder="Phone Number" name="Mob"
+            <input type="tel" placeholder="Phone Number *" name="Mob"
             minlength="10"
                             maxlength="13"
                             onkeypress='return event.charCode >= 48 && event.charCode <= 57'
             required
                 class="w-full mb-3 px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white">
 
-            <div>
+            <input
+                type="text"
+                name="City"
+                placeholder="Preferable Time to Contact *"
+                minlength="1"
+                maxlength="20"
+                required
+                class="w-full px-5 py-3 mb-3  rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white"
+            />
+
+            {{--<div>
                 <select name="City" required class="w-full px-5 py-3 mb-3  rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-slate-500 appearance-none dark:bg-slate-700 dark:border-slate-600 dark:text-slate-300">
                     <option disabled selected>Kindly, give an update on it.</option>
                     <option value="10am-11am" class="text-secondary-dark dark:text-white">10am - 12pm</option>
@@ -233,7 +243,7 @@
                     <option value="4pm-6pm" class="text-secondary-dark dark:text-white">4pm - 6pm</option>
                     <option value="6pm-8pm" class="text-secondary-dark dark:text-white">6pm - 8pm</option>
                 </select>
-            </div>
+            </div>--}}
             <!-- Auto UTM capture -->
             <input type="hidden" name="utm_source" id="utm_source">
             <input type="hidden" name="utm_medium" id="utm_medium">
@@ -751,20 +761,43 @@
         <form id="modal-call-form" class="lead-form" data-form-name="modal_call_form"  action="{{ route('lead.submit') }}" method="POST" class="space-y-4">
             @csrf
             <input type="hidden" name="Remark" id="modal_remark">
-            <input type="text" placeholder="Full Name" name="Name" required minlength="3"
-                                maxlength="50"
-                                onkeypress="return /^[a-zA-Z ]+$/i.test(event.key)"
+            <input
+                type="text"
+                placeholder="Full Name *"
+                name="Name"
+                required
+                minlength="3"
+                maxlength="50"
+                onkeypress="return /^[a-zA-Z ]+$/i.test(event.key)"
                 class="w-full mb-3 px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white">
 
-            <input type="email" placeholder="Email Address" name="Email"
+            <input
+                type="email"
+                placeholder="Email Address"
+                name="Email"
                 class="w-full mb-3 px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white">
 
-            <input type="tel" placeholder="Phone Number" name="Mob" required minlength="10"
-                            maxlength="13"
-                            onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+            <input
+                type="tel"
+                placeholder="Phone Number *"
+                name="Mob"
+                required
+                minlength="10"
+                maxlength="13"
+                onkeypress='return event.charCode >= 48 && event.charCode <= 57'
                 class="w-full mb-3 px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white">
 
-                <div>
+
+            <input
+                type="text"
+                name="City"
+                placeholder="Preferable Time to Contact *"
+                minlength="1"
+                maxlength="20"
+                required
+                class="w-full px-5 py-3 mb-3  rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white"
+            />
+               {{-- <div>
                     <select name="City" required
                             class="w-full px-5 py-3 mb-3  rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-slate-500 appearance-none dark:bg-slate-700 dark:border-slate-600 dark:text-slate-300">
                         <option disabled selected>Kindly, give an update on it.</option>
@@ -775,7 +808,7 @@
                         <option value="6pm-8pm" class="text-secondary-dark dark:text-white">6pm - 8pm</option>
                         <option value="6pm-8pm" class="text-secondary-dark dark:text-white">6pm - 8pm</option>
                     </select>
-                </div>
+                </div>--}}
                 <!-- Auto UTM capture -->
                 <input type="hidden" name="utm_source" id="utm_source">
                 <input type="hidden" name="utm_medium" id="utm_medium">

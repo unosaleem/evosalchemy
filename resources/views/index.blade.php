@@ -275,16 +275,25 @@
                     <input
                             type="tel"
                             name="Mob"
-                            placeholder="Phone Number"
+                            placeholder="Phone Number *"
                             minlength="10"
                             maxlength="13"
                             onkeypress='return event.charCode >= 48 && event.charCode <= 57'
                             required
                             class="w-full px-5 py-3 mb-3  rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white"
                     />
+                    <input
+                            type="text"
+                            name="City"
+                            placeholder="Preferable Time to Contact *"
+                            minlength="1"
+                            maxlength="20"
+                            required
+                            class="w-full px-5 py-3 mb-3  rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white"
+                    />
 
 
-                     <div>
+                    {{-- <div>
                           <select name="City" required
                             class="w-full px-5 py-3 rounded-lg mb-3 bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-slate-500 appearance-none dark:bg-slate-700 dark:border-slate-600 dark:text-slate-300">
                             <option disabled selected>Kindly, give an update on it.</option>
@@ -294,7 +303,7 @@
                               <option value="4pm-6pm" class="text-secondary-dark dark:text-white">4pm - 6pm</option>
                               <option value="6pm-8pm" class="text-secondary-dark dark:text-white">6pm - 8pm</option>
                           </select>
-                    </div>
+                    </div>--}}
 
                     <div class="flex items-start pt-2 mb-3 ">
                         <input
@@ -1073,11 +1082,28 @@
                         />
                     </div>
 
+                    <div
+                        class="flex items-center border rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-yellow-500 transition"
+                    >
+                                <span class="px-3 text-gray-500">
+                                    <i class="fa-solid fa-time"></i>
+                                </span>
+                        <input
+                            type="text"
+                            name="City"
+                            minlength="1"
+                            maxlength="20"
+                            placeholder="Preferable Time to Contact *"
+                            required
+                            class="w-full px-3 py-3 outline-none text-gray-700 dark:bg-slate-700 dark:border-slate-600 dark:text-white"
+                        />
+                    </div>
 
-                    <div>
+
+                    {{--<div>
                         <select name="City" required
                                 class="w-full px-5 py-3 mb-3  rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-slate-500 appearance-none dark:bg-slate-700 dark:border-slate-600 dark:text-slate-300">
-                            <option disabled selected>Kindly, give an update on it.</option>
+                            <option disabled selected>Preferable Time to Contact </option>
                             <option value="10am-11am" class="text-secondary-dark dark:text-white">10am - 12pm</option>
                             <option value="12am-2pm" class="text-secondary-dark dark:text-white">12pm - 2pm</option>
                             <option value="2pm-4pm" class="text-secondary-dark dark:text-white">2pm - 4pm</option>
@@ -1086,7 +1112,7 @@
 
 
                         </select>
-                    </div>
+                    </div>--}}
 
                     <button
                             type="submit"
