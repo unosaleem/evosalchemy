@@ -88,6 +88,6 @@ class LeadController extends Controller
         }
 
         // redirect to thank you
-        return redirect()->route('thankyou')->with('status', 'submitted');
+        return redirect()->route('page.thankyou')->with('status', 'submitted');
     }
 }
