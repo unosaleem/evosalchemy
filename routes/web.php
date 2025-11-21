@@ -11,5 +11,4 @@ Route::post('/submit', [LeadController::class, 'submit'])->name('lead.submit');
 Route::get('/thankyou', function () { return view('thankyou'); })->name('page.thankyou');
 Route::get('/privacy-policy', function () { return view('privacy-policy'); })->name('page.privacy');
 Route::get('/terms-and-conditions', function () { return view('terms-and-condition'); })->name('page.terms');
-Route::get('/leads', [LeadController::class, 'index'])->name('leads.index');
-Route::get('/leads/export', [LeadController::class, 'export'])->name('leads.export');
+Route::get('/admin/enquiries', [LeadController::class, 'index'])->name('enquiry.index');

@@ -11,20 +11,48 @@ use Illuminate\Support\Facades\Mail;
 
 class LeadController extends Controller
 {
+    public function index(Request $request)
+    {
+        // GET DATE FILTERS
+        $from = $request->from;
+        $to   = $request->to;
+
+        // QUERY
+        $query = Lead::query();
+
+        if ($from) {
+            $query->whereDate('created_at', '>=', $from);
+        }
+
+        if ($to) {
+            $query->whereDate('created_at', '<=', $to);
+        }
+
+        // GET LEADS (pagination so page fast stays fast)
+        $leads = $query->orderBy('id', 'DESC')->paginate(100);
+
+        // RETURN VIEW
+        return view('enquiry', compact('leads', 'from', 'to'));
+    }
+
     public function submit(Request $request)
     {
-        // validation
-        $data = $request->validate([
-            'Name' => 'required|string|max:255',
-            'Mob' => 'required|string|max:20',
-            'Email' => 'nullable|email|max:255',
-            'City' => 'nullable|string|max:255',
-            'Remark' => 'nullable|string',
-        ]);
-
+        // STEP 1: VALIDATION
         try {
+            $data = $request->validate([
+                'Name' => 'required|string|max:255',
+                'Mob'  => 'required|string|max:20',
+                'Email'=> 'nullable|email|max:255',
+                'City' => 'nullable|string|max:255',
+                'Remark'=> 'nullable|string',
+            ]);
+        } catch (\Exception $e) {
+            return back()->with('error', 'Validation Error: '.$e->getMessage())->withInput();
+        }
 
-            // reCAPTCHA CHECK
+
+        // STEP 2: reCAPTCHA CHECK
+        try {
             $recaptchaToken  = $request->input('recaptcha_token');
             $recaptchaSecret = trim(env('RECAPTCHA_SECRET_KEY'));
             $recaptchaSite   = trim(env('RECAPTCHA_SITE_KEY'));
@@ -45,11 +73,16 @@ class LeadController extends Controller
                 $json = $response->json();
 
                 if (!($json['success'] ?? false) || (($json['score'] ?? 0) < 0.4)) {
-                    return back()->with('error', 'reCAPTCHA verification failed.')->withInput();
+                    return back()->with('error', 'reCAPTCHA Failed: Low score or invalid token')->withInput();
                 }
             }
+        } catch (\Exception $e) {
+            return back()->with('error', 'reCAPTCHA Error: '.$e->getMessage())->withInput();
+        }
 
-            // SAVE to DB
+
+        // STEP 3: SAVE TO DB
+        try {
             $lead = Lead::create([
                 'name'   => $data['Name'] ?? null,
                 'mobile' => $data['Mob'] ?? null,
@@ -57,35 +90,39 @@ class LeadController extends Controller
                 'city'   => $data['City'] ?? null,
                 'remark' => $data['Remark'] ?? null,
             ]);
+        } catch (\Exception $e) {
+            return back()->with('error', 'Database Save Error: '.$e->getMessage())->withInput();
+        }
 
-            // Email notify admin
+
+        // STEP 4: SEND EMAIL
+        try {
             if (isset($lead) && env('ADMIN_EMAIL')) {
                 Mail::to(env('ADMIN_EMAIL'))->send(new NewLeadMail($lead));
             }
-
-            // FORWARD TO EXTERNAL URL
-            try {
-                $client = new \GuzzleHttp\Client();
-                $forwardUrl = 'https://evos08.4erealty.com/WebCreate.aspx?UID=fourqt&PWD=wn9mxO76f34=&Channel=DNM&Src=Digital_Nawab&url=';
-
-                $client->post($forwardUrl, [
-                    'form_params' => $request->all(),
-                    'timeout' => 5,
-                ]);
-            } catch (\Exception $e) {
-                // Forward error — not a blocking error
-                Log::error('Forward lead failed: '.$e->getMessage());
-            }
-
-            // SUCCESS → THANK YOU PAGE
-            return redirect()->route('page.thankyou')->with('success', 'Your form was submitted successfully.');
-
         } catch (\Exception $e) {
-
-            Log::error('Lead error: '.$e->getMessage());
-            return back()->with('error', 'Something went wrong, please try again.')->withInput();
+            return back()->with('error', 'Mail Error: '.$e->getMessage())->withInput();
         }
+
+
+        // STEP 5: FORWARD TO EXTERNAL API
+        try {
+            $client = new \GuzzleHttp\Client();
+            $forwardUrl = 'https://evos08.4erealty.com/WebCreate.aspx?UID=fourqt&PWD=wn9mxO76f34=&Channel=DNM&Src=Digital_Nawab&url=';
+
+            $client->post($forwardUrl, [
+                'form_params' => $request->all(),
+                'timeout' => 5,
+            ]);
+        } catch (\Exception $e) {
+            return back()->with('error', 'Forward API Error: '.$e->getMessage())->withInput();
+        }
+
+
+        // SUCCESS
+        return redirect()->route('page.thankyou')->with('success', 'Your form was submitted successfully.');
     }
+
 
     public function submits(Request $request)
     {
