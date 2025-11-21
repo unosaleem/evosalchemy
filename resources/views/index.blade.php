@@ -1201,6 +1201,14 @@
             closeVideoModal();
         }
     });
+
+    // Auto open after 10 seconds
+    window.addEventListener("load", function () {
+        setTimeout(() => {
+            openRequestCallModal();
+        }, 10000);
+    });
+
 </script>
 
 <!-- ⚙️ Script Amenities Swiper-->
