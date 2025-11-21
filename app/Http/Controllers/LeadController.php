@@ -108,17 +108,36 @@ class LeadController extends Controller
         // STEP 5: FORWARD TO EXTERNAL API
         try {
             $client = new \GuzzleHttp\Client();
-            $forwardUrl = 'https://evos08.4erealty.com/WebCreate.aspx?UID=fourqt&PWD=wn9mxO76f34=&Channel=DNM&Src=Digital_Nawab&url=';
 
-            $client->post($forwardUrl, [
-                'form_params' => $request->all(),
-                'timeout' => 5,
+            $url = 'https://evos08.4erealty.com/WebCreate.aspx';
+
+            $params = [
+                'UID'     => 'fourqt',
+                'PWD'     => 'wn9mxO76f34=',
+                'Channel' => 'DNM',
+                'Src'     => 'Digital_Nawab',
+                'Name'    => $request->Name,
+                'Email'   => $request->Email,
+                'Mob'     => $request->Mob,
+                'City'    => $request->City ?? null,
+                'Remark'  => $request->Remark ?? null,
+            ];
+
+            $response = $client->post($url, [
+                'form_params' => $params,
+                'timeout'     => 10,
             ]);
-            // Return RAW API response
-            return response($response->getBody()->getContents(), $response->getStatusCode());
+
+            return response($response->getBody()->getContents(), 200);
+
         } catch (\Exception $e) {
-            return back()->with('error', 'Forward API Error: '.$e->getMessage())->withInput();
+            return response()->json([
+                'error'   => true,
+                'message' => 'Forward API Error',
+                'details' => $e->getMessage()
+            ], 500);
         }
+
 
 
         // SUCCESS
