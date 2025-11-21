@@ -756,10 +756,17 @@
                             onkeypress='return event.charCode >= 48 && event.charCode <= 57'
                 class="w-full mb-3 px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white">
 
-            <input type="text" placeholder="City" name="City" minlength="3"
-                                maxlength="30"
-                                onkeypress="return /^[a-zA-Z ]+$/i.test(event.key)"
-                class="w-full mb-3 px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white">
+                <div>
+                    <select name="City" required
+                            class="w-full px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-slate-500 appearance-none dark:bg-slate-700 dark:border-slate-600 dark:text-slate-300">
+                        <option disabled selected>Kindly, give an update on it.</option>
+                        <option value="10am-11am" class="text-secondary-dark dark:text-white">10AM - 12Am</option>
+                        <option value="12am-2pm" class="text-secondary-dark dark:text-white">12AM - 2PM</option>
+                        <option value="2pm-4pm" class="text-secondary-dark dark:text-white">2PM - 4PM</option>
+                        <option value="4pm-6pm" class="text-secondary-dark dark:text-white">4PM - 6PM</option>
+                        <option value="6pm-8pm" class="text-secondary-dark dark:text-white">6PM - 8PM</option>
+                    </select>
+                </div>
                 <!-- Auto UTM capture -->
                 <input type="hidden" name="utm_source" id="utm_source">
                 <input type="hidden" name="utm_medium" id="utm_medium">

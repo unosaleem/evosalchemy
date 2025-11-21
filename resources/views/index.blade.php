@@ -282,27 +282,30 @@
                             required
                             class="w-full px-5 py-3 mb-3  rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white"
                     />
-                    <input
-                            type="text"
-                            placeholder="City"
-                            name="City"
-                            minlength="3"
-                                maxlength="30"
-                                onkeypress="return /^[a-zA-Z ]+$/i.test(event.key)"
-                            required
-                            class="w-full px-5 py-3 mb-3  rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white"
-                    />
+{{--                    <input--}}
+{{--                            type="text"--}}
+{{--                            placeholder="City"--}}
+{{--                            name="City"--}}
+{{--                            minlength="3"--}}
+{{--                                maxlength="30"--}}
+{{--                                onkeypress="return /^[a-zA-Z ]+$/i.test(event.key)"--}}
+{{--                            required--}}
+{{--                            class="w-full px-5 py-3 mb-3  rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white"--}}
+{{--                    />--}}
 
-                    <!-- <div>
-              <select
-                class="w-full px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-slate-500 appearance-none dark:bg-slate-700 dark:border-slate-600 dark:text-slate-300">
-                <option disabled selected>I am interested in...</option>
-                <option value="1br" class="text-secondary-dark dark:text-white">1 Bedroom Apartments</option>
-                <option value="2br" class="text-secondary-dark dark:text-white">2 Bedroom Apartments</option>
-                <option value="penthouse" class="text-secondary-dark dark:text-white">Penthouse/Custom Units</option>
-                <option value="investment" class="text-secondary-dark dark:text-white">Investment Opportunities</option>
-              </select>
-            </div> -->
+                     <div>
+                          <select name="City" required
+                            class="w-full px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-slate-500 appearance-none dark:bg-slate-700 dark:border-slate-600 dark:text-slate-300">
+                            <option disabled selected>Kindly, give an update on it.</option>
+                            <option value="10am-11am" class="text-secondary-dark dark:text-white">10AM - 12Am</option>
+                            <option value="12am-2pm" class="text-secondary-dark dark:text-white">12AM - 2PM</option>
+                            <option value="2pm-4pm" class="text-secondary-dark dark:text-white">2PM - 4PM</option>
+                            <option value="4pm-6pm" class="text-secondary-dark dark:text-white">4PM - 6PM</option>
+                            <option value="6pm-8pm" class="text-secondary-dark dark:text-white">6PM - 8PM</option>
+
+
+                          </select>
+                    </div>
 
                     <div class="flex items-start pt-2 mb-3 ">
                         <input
@@ -1081,7 +1084,7 @@
                         />
                     </div>
 
-                    <div
+                    {{--<div
                             class="flex items-center border rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-yellow-500 transition"
                     >
                                 <span class="px-3 text-gray-500">
@@ -1097,18 +1100,21 @@
                                 required
                                 class="w-full px-3 py-3 outline-none text-gray-700 dark:bg-slate-700 dark:border-slate-600 dark:text-white"
                         />
-                    </div>
+                    </div>--}}
 
-                    <!-- <div>
-              <select
-                class="w-full px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-slate-500 appearance-none dark:bg-slate-700 dark:border-slate-600 dark:text-slate-300">
-                <option disabled selected>I am interested in...</option>
-                <option value="1br" class="text-secondary-dark dark:text-white">1 Bedroom Apartments</option>
-                <option value="2br" class="text-secondary-dark dark:text-white">2 Bedroom Apartments</option>
-                <option value="penthouse" class="text-secondary-dark dark:text-white">Penthouse/Custom Units</option>
-                <option value="investment" class="text-secondary-dark dark:text-white">Investment Opportunities</option>
-              </select>
-            </div> -->
+                    <div>
+                        <select name="City" required
+                                class="w-full px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-slate-500 appearance-none dark:bg-slate-700 dark:border-slate-600 dark:text-slate-300">
+                            <option disabled selected>Kindly, give an update on it.</option>
+                            <option value="10am-11am" class="text-secondary-dark dark:text-white">10AM - 12Am</option>
+                            <option value="12am-2pm" class="text-secondary-dark dark:text-white">12AM - 2PM</option>
+                            <option value="2pm-4pm" class="text-secondary-dark dark:text-white">2PM - 4PM</option>
+                            <option value="4pm-6pm" class="text-secondary-dark dark:text-white">4PM - 6PM</option>
+                            <option value="6pm-8pm" class="text-secondary-dark dark:text-white">6PM - 8PM</option>
+
+
+                        </select>
+                    </div>
 
                     <button
                             type="submit"

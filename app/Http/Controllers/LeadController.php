@@ -128,7 +128,7 @@ class LeadController extends Controller
                 'timeout'     => 10,
             ]);
 
-            return response($response->getBody()->getContents(), 200);
+//            return response($response->getBody()->getContents(), 200);
 
         } catch (\Exception $e) {
             return response()->json([
