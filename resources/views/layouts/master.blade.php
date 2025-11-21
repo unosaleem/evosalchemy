@@ -144,8 +144,9 @@
 <!-- FIXED REQUEST CALL BUTTON ON DESKTOP -->
 <!-- Request a Call Floating Button -->
 <button
-        onclick="openRequestCallModal()"
-        class="hidden lg:flex items-center justify-center fixed top-1/2 right-[-4rem] -rotate-90 z-50 px-5 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-white font-semibold tracking-wide rounded-t-xl shadow-lg hover:from-yellow-400 hover:to-amber-500 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+    onclick="openRequestCallModal(this)" data-remark="Request a Call | Fixed Right Button"
+
+    class="hidden lg:flex items-center justify-center fixed top-1/2 right-[-4rem] -rotate-90 z-50 px-5 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-white font-semibold tracking-wide rounded-t-xl shadow-lg hover:from-yellow-400 hover:to-amber-500 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
 >
     📞 Request a Call</button
 ><!-- Request a Call Floating Button -->
@@ -157,7 +158,8 @@
     <a
             href="javascript:void(0);"
             id="mobile-fixed-cta"
-            onclick="openRequestCallModal()"
+            onclick="openRequestCallModal(this)" data-remark=" Free Site Visit | Fixed Mobile Button"
+
             class="fixed bottom-0 left-0 right-0 h-16 bg-accent-dark shadow-2xl flex justify-around hover:bg-accent-gold border-t-4 border-accent-gold items-center md:hidden z-40 text-white font-bold"
     >📞 Free Site Visit
     </a>
@@ -931,46 +933,68 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 <!-- 🧠 JS for modal -->
+
 <!-- ⚙️ Modal Script -->
 <script>
     const modal = document.getElementById("request-call-modal");
     const modalContent = document.getElementById("modal-content");
 
-    // function openRequestCallModal() {
-    //     modal.classList.remove("hidden");
-    //     setTimeout(() => {
-    //         modal.classList.remove("opacity-0");
-    //         modalContent.classList.remove("scale-95");
-    //     }, 10);
-    // }
-
-    // // Auto open after 10 seconds
-    // window.addEventListener("load", function () {
-    //     setTimeout(() => {
-    //         openRequestCallModal();
-    //     }, 10000);
-    // });
-
     function openRequestCallModal(trigger = null) {
 
-// 1) FIND Remark input
-const remarkInput = document.getElementById("modal_remark");
+        const remarkInput = document.getElementById("modal_remark");
 
-// 2) CHECK IF OPENED BY CLICK
-if (trigger && trigger.getAttribute("data-remark")) {
-    remarkInput.value = trigger.getAttribute("data-remark");
-} else {
-    // 3) IF AUTO OPEN — SET DEFAULT REMARK
-    remarkInput.value = "window load pop";
-}
+        // IF CLICKED
+        if (trigger && trigger.dataset.remark) {
+            remarkInput.value = trigger.dataset.remark;
+        }
+        else {
+            // AUTO POPUP
+            remarkInput.value = "window load pop";
+        }
 
-// OPEN POPUP ANIMATION
-modal.classList.remove("hidden");
-setTimeout(() => {
-    modal.classList.remove("opacity-0");
-    modalContent.classList.remove("scale-95");
-}, 10);
-}
+        modal.classList.remove("hidden");
+
+        setTimeout(() => {
+            modal.classList.remove("opacity-0");
+            modalContent.classList.remove("scale-95");
+        }, 10);
+    }
+
+    function closeRequestCallModal() {
+        modal.classList.add("opacity-0");
+        modalContent.classList.add("scale-95");
+        setTimeout(() => {
+            modal.classList.add("hidden");
+        }, 300);
+    }
+
+    // Close modal if click outside
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeRequestCallModal();
+    });
+</script>
+
+<!--
+<script>
+    const modal = document.getElementById("request-call-modal");
+    const modalContent = document.getElementById("modal-content");
+
+    function openRequestCallModal() {
+        modal.classList.remove("hidden");
+        setTimeout(() => {
+            modal.classList.remove("opacity-0");
+            modalContent.classList.remove("scale-95");
+        }, 10);
+    }
+
+    // Auto open after 10 seconds
+    window.addEventListener("load", function () {
+        setTimeout(() => {
+            openRequestCallModal();
+        }, 10000);
+    });
+
+
 
     function closeRequestCallModal() {
         modal.classList.add("opacity-0");
@@ -985,7 +1009,7 @@ setTimeout(() => {
         if (e.target === modal) closeRequestCallModal();
     });
 </script>
-
+-->
 </body>
 </html>
 

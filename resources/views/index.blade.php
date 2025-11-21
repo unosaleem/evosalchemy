@@ -107,7 +107,7 @@
                 <li class="list-none">
                     <a
                             href="javascript:void(0);"
-                            onclick="openRequestCallModal(this)"
+                            onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Gold Class Living Section "
                             class="inline-block px-10 py-3 bg-accent-gold text-white font-semibold rounded-2xl shadow-lg hover:bg-yellow-500 hover:text-gray-900 transition duration-300 animate-[float_3s_ease-in-out_infinite]"
                     >
                         Check Floor Plans & Pricing
