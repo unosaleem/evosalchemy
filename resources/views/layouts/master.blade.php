@@ -197,7 +197,7 @@
         <form id="mobile-enquiry-form" action="{{ route('lead.submit') }}"  method="POST" class="space-y-4">
             @csrf
 
-            <input type="text" placeholder="Full Name" name="name" required minlength="3"
+            <input type="text" placeholder="Full Name" name="Name" required minlength="3"
                                 maxlength="50"
                                 onkeypress="return /^[a-zA-Z ]+$/i.test(event.key)"
                 class="w-full px-5 mb-3 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white">
@@ -580,7 +580,7 @@
         <form id="modal-call-form" class="lead-form" data-form-name="modal_call_form"  action="{{ route('lead.submit') }}" method="POST" class="space-y-4">
             @csrf
             <input type="hidden" name="Remark" id="modal_remark">
-            <input type="text" placeholder="Full Name" name="name" required minlength="3"
+            <input type="text" placeholder="Full Name" name="Name" required minlength="3"
                                 maxlength="50"
                                 onkeypress="return /^[a-zA-Z ]+$/i.test(event.key)"
                 class="w-full mb-3 px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white">
