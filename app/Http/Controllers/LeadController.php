@@ -117,7 +117,7 @@ class LeadController extends Controller
                 'Channel' => 'DNM',
                 'Src'     => 'Digital_Nawab',
                 'Name'    => $request->Name,
-                'Email'   => $request->Email,
+                'Email'   => $request->Email ?? null,
                 'Mob'     => $request->Mob,
                 'City'    => $request->City ?? null,
                 'Remark'  => $request->Remark ?? null,
