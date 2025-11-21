@@ -9,6 +9,15 @@ Route::get('/clear-cache', function() {
     Artisan::call('config:cache');
     return "Cleared!";
 });
+
+Route::get('/mail-test', function() {
+    Mail::raw("Mail working OK!", function ($msg) {
+        $msg->to('your-email@gmail.com')->subject('Test Email');
+    });
+
+    return "Mail Sent!";
+});
+
 Route::get('/', function () {return view('index');});
 Route::post('/submit', [LeadController::class, 'submit'])->name('lead.submit');
 Route::get('/thankyou', function () { return view('thankyou'); })->name('page.thankyou');
