@@ -114,6 +114,8 @@ class LeadController extends Controller
                 'form_params' => $request->all(),
                 'timeout' => 5,
             ]);
+            // Return RAW API response
+            return response($response->getBody()->getContents(), $response->getStatusCode());
         } catch (\Exception $e) {
             return back()->with('error', 'Forward API Error: '.$e->getMessage())->withInput();
         }
