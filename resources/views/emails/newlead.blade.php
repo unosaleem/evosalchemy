@@ -4,7 +4,7 @@
 {{-- BRAND HEADER WITH LOGO --}}
 {{-- ========================= --}}
 <div style="text-align:center; margin-bottom: 25px;">
-    <img src="https://evosalchemy.com/wp-content/uploads/2024/02/cropped-Alchemy-Logo.png.webp" alt="Brand Logo" style="max-height: 70px;">
+    <img src="{!! asset('assets') !!}/images/alchemy-logo.webp" alt="Brand Logo" style="max-height: 70px;">
     <h2 style="margin-top:10px; color:#1f2937; font-weight:700;">
         New Lead Notification
     </h2>
@@ -14,7 +14,7 @@
 {{-- INTRO TEXT --}}
 {{-- ========================= --}}
 <p style="font-size:16px; color:#374151;">
-    A new lead has submitted their details on your website.  
+    A new lead has submitted their details on your website.
     Below is the information they provided:
 </p>
 
@@ -35,12 +35,12 @@ $fields = [
 
 @foreach($fields as $label => $value)
     @if(!empty($value))
-**{{ $label }}:** {{ $value }}  
+**{{ $label }}:** {{ $value }}
     @endif
 @endforeach
 
 @if(!empty($lead->remark))
-**Remarks:**  
+**Remarks:**
 {{ $lead->remark }}
 @endif
 @endcomponent
@@ -77,7 +77,7 @@ View Lead in Dashboard
 {{-- FOOTER --}}
 {{-- ========================= --}}
 <p style="text-align:center; font-size:13px; color:#9ca3af; margin-top:30px;">
-    © {{ date('Y') }} <strong>Your Brand Name</strong>.  
+    © {{ date('Y') }} <strong>Your Brand Name</strong>.
     All rights reserved.
 </p>
 

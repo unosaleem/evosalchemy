@@ -241,7 +241,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <div class="text-2xl font-extrabold tracking-tight text-white flex items-center">
             <img
-                    src="https://evosalchemy.com/wp-content/uploads/2024/02/cropped-Alchemy-Logo.png.webp"
+                    src="{!! asset('assets') !!}/images/alchemy-logo.webp"
                     alt="Evos Alchemy Logo"
                     class="w-[150px] transition-opacity duration-300"
             />
@@ -332,7 +332,7 @@
 </header>
 
         <main class="flex-grow">
-            @if(session('error'))
+            {{--@if(session('error'))
                 <div class="bg-red-500 text-white p-3 rounded mb-4">
                     {{ session('error') }}
                 </div>
@@ -348,7 +348,7 @@
                 <div class="bg-red-500 text-white p-3 rounded mb-4">
                     Please fix the errors below.
                 </div>
-            @endif
+            @endif--}}
 
 
                 <script>
@@ -493,7 +493,7 @@
                         href="https://evosbuildcon.com/”
 "
                 ></a>
-                <img width="80%" src="assets/images/Untitled-2d-01.webp?evos%20logo" alt="logo" />
+                <img width="80%" src="{!! asset('assets') !!}/images/Untitled-2d-01.webp?evos%20logo" alt="logo" />
                 <p class="text-sm text-slate-400 max-w-xs mx-auto md:mx-0 mt-3">
                     From the house of EVOS Buildcon, Odisha’s most trusted luxury developer. Winner of “Best
                     Residential Luxury Project – 2025” title by OTV Business Odisha Awards, Evos Alchemy stands
