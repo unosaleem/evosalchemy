@@ -1135,6 +1135,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 10);
     }
 
+    // Auto open after 10 seconds
+    window.addEventListener("load", function () {
+        setTimeout(() => {
+            openRequestCallModal();
+        }, 10000);
+    });
+    
     function closeRequestCallModal() {
         modal.classList.add("opacity-0");
         modalContent.classList.add("scale-95");
