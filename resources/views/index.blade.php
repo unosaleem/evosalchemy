@@ -549,11 +549,11 @@
                     Schedule a <span class="text-accent-gold">Site Visit</span>
                 </h2>
 
-            
+
                 <form class="lead-form space-y-5" data-form-name="modal_call_form" action="{{ route('lead.submit') }}" method="POST">
                     <input type="hidden" name="Remark"  value="Schedule my Visit | Schedule a Site Visit ">
                     @csrf
-              
+
                     <!-- Name -->
                     <div
                             class="flex items-center border rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-yellow-500 transition"
@@ -601,8 +601,8 @@
                                     hasn’t yet secured RERA clearance. The primary purpose of this website is to
                                     generate interest and gather information. By providing my data, I consent to its use
                                     in accordance with the
-                                    <a href="{#}" class="text-blue-600 underline">Privacy Policy</a> |
-                                    <a href="#" class="text-blue-600 underline">Terms & Conditions</a>.
+                                    <a href="{!! route('page.privacy') !!}" class="text-blue-600 underline">Privacy Policy</a> |
+                                    <a href="{!! route('page.terms') !!}" class="text-blue-600 underline">Terms & Conditions</a>.
                                 </span>
                     </label>
 
@@ -840,7 +840,7 @@
                     Check Floor Plans &amp; Pricing
                 </a>
             </div>
-           
+
         </div>
     </div>
 </section>
@@ -1029,7 +1029,7 @@
                     <span class="text-accent-gold">Book</span> a Personal Consultation
                 </h3>
                 <!-- Duplicated Priority Form (Needs unique IDs, but keeping original for simplicity) -->
-               
+
                 <form class="lead-form space-y-5" data-form-name="modal_call_form" action="{{ route('lead.submit') }}" method="POST">
                     <input type="hidden" name="Remark"  value="Request Price & Availability | Book a Personal Consultation ">
                     <div
@@ -1246,7 +1246,7 @@
 
 <!-- ⚙️ Script YouTube Shorts Swiper-->
 <script>
-    
+
     var swiper = new Swiper(".youtubeShortsSwiper", {
         loop: true,
         autoplay: {

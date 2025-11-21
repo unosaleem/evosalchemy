@@ -205,7 +205,7 @@
             <input type="email" placeholder="Email Address" name="Email"
                 class="w-full mb-3 px-5 py-3 rounded-lg bg-slate-100 border border-slate-300 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition duration-300 text-secondary-dark dark:bg-slate-700 dark:border-slate-600 dark:text-white">
 
-            <input type="tel" placeholder="Phone Number" name="Mob" 
+            <input type="tel" placeholder="Phone Number" name="Mob"
             minlength="10"
                             maxlength="13"
                             onkeypress='return event.charCode >= 48 && event.charCode <= 57'
@@ -494,9 +494,9 @@
             <div class="reveal-element" style="transition-delay: 0.2s">
                 <h4 class="text-xl font-bold text-white mb-4">Information</h4>
                 <ul class="space-y-2 text-slate-400 text-sm">
-                    <li><a href="privacy-policy.html" class="hover:text-accent-gold">Privacy Policy</a></li>
+                    <li><a href="{!! route('page.privacy') !!}" class="hover:text-accent-gold">Privacy Policy</a></li>
                     <li>
-                        <a href="terms-and-condition.html" class="hover:text-accent-gold">
+                        <a href="{!! route('page.terms') !!}" class="hover:text-accent-gold">
                             Terms & Conditions</a
                         >
                     </li>
