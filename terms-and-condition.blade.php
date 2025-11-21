@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terms & Conditions - Evos Alchemy</title>
+@extends('layouts.master')
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+@section('title','Thank You')
 
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
-</head>
-
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-500">
-
+@section('content')
 <!-- Page Container -->
 <section class="py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -72,7 +60,7 @@
             <p class="mb-4 font-semibold">
                 You warrant and represent that:
             </p>
-            
+
 
             <ul class="list-disc pl-6 space-y-2 mb-6">
                 <li>You are entitled to post the Comments on our website and have all necessary licenses and consents to do .</li>
@@ -184,6 +172,4 @@
 
     </div>
 </section>
-
-</body>
-</html>
+@endsection

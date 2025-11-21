@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy - Evos Alchemy</title>
+@extends('layouts.master')
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+@section('title','Thank You')
 
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
-</head>
-
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-500">
-
+@section('content')
 <!-- Page Container -->
 <section class="py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -137,5 +125,4 @@
     </div>
 </section>
 
-</body>
-</html>
+@endsection
