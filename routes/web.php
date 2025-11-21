@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LeadController;
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    return "Cleared!";
 });
-
+Route::get('/', function () {return view('index');});
 Route::post('/submit', [LeadController::class, 'submit'])->name('lead.submit');
 Route::get('/thankyou', function () { return view('thankyou'); })->name('page.thankyou');
 Route::get('/privacy-policy', function () { return view('privacy-policy'); })->name('page.privacy');
