@@ -15,7 +15,7 @@
                 <label>To</label>
                 <input type="date" name="to" value="{{ $to }}" class="border p-2 rounded">
             </div>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded mt-6">Filter</button>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Filter</button>
         </form>
 
         <!-- SEARCH -->

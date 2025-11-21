@@ -2,8 +2,18 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8" />
+    <meta name="language" content="english">
+    <meta property="og:type" content="website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@yield('title', 'Landing')</title>
+    <title>@yield('title', 'Premium Luxury Apartments | 2 & 3 BHK Homes at Best Price')</title>
+    <meta name="description" content="@yield('description', 'Book your dream home today! Explore 2 & 3 BHK luxury apartments with modern amenities, excellent location, and flexible pricing. Get floor plans, pricing & exclusive offers now.')">
+    <meta name="author" content="Digital Nawab || uno">
+    <!-- Global site shotcut --->
+    <link defer rel="shortcut icon" href="https://www.thetopknot.in/assets/images/favicon.png" type="image/x-icon/png">
+    <link defer rel="apple-touch-icon image_src" href="https://www.thetopknot.in/assets/images/favicon.png">
+    <link defer rel="icon" href="https://www.thetopknot.in/assets/images/favicon.png" type="image/x-icon/png">
+    <!-- Outhor and keyword -->
+    <meta name="og_site_name" property="og:site_name" content="www.thetopknot.in" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />

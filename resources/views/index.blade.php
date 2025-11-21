@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
-@section('title','Fast Landing Page')
+@section('title','Premium Luxury Apartments | 2 & 3 BHK Homes at Best Price')
+@section('description','Book your dream home today! Explore 2 & 3 BHK luxury apartments with modern amenities, excellent location, and flexible pricing. Get floor plans, pricing & exclusive offers now.')
 
 @section('content')
     <!-- Hero Slider -->
