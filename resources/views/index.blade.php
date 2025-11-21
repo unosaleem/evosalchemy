@@ -1086,7 +1086,7 @@
                         class="flex items-center border rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-yellow-500 transition"
                     >
                                 <span class="px-3 text-gray-500">
-                                    <i class="fa-solid fa-clock-o"></i>
+                                    <i class="fa-solid fa-clock"></i>
                                 </span>
                         <input
                             type="text"
