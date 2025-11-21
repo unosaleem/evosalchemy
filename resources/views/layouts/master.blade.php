@@ -256,11 +256,13 @@
 >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <div class="text-2xl font-extrabold tracking-tight text-white flex items-center">
-            <img
+            <a href="{!! url('/') !!}">
+                <img
                     src="{!! asset('assets') !!}/images/alchemy-logo.webp"
                     alt="Evos Alchemy Logo"
                     class="w-[150px] transition-opacity duration-300"
-            />
+                />
+            </a>
         </div>
         <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-200">
             <a href="#gold-class-living" class="hover:text-accent-gold transition duration-300">Experience</a>
