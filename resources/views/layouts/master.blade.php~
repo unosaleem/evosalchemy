@@ -39,7 +39,7 @@
 
 
 
-<!-- GA4 gtag -->
+<!-- GA4 gtag Dynamic-->
 @if (!empty(env('GA4_MEASUREMENT_ID')))
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GA4_MEASUREMENT_ID') }}"></script>
 <script>

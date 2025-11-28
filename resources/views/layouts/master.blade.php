@@ -70,13 +70,14 @@
     <!-- End Meta Pixel Code -->
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDLQ3D0EG4"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZNRKZT0CQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-MDLQ3D0EG4');
+        gtag('config', 'G-DZNRKZT0CQ');
     </script>
     <!-- End Google tag (gtag.js) -->
 
