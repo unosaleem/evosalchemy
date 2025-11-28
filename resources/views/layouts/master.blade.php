@@ -37,6 +37,8 @@
 </script>
 @endif
 
+
+
 <!-- GA4 gtag -->
 @if (!empty(env('GA4_MEASUREMENT_ID')))
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GA4_MEASUREMENT_ID') }}"></script>
@@ -76,6 +78,16 @@
         gtag('config', 'G-MDLQ3D0EG4');
     </script>
     <!-- End Google tag (gtag.js) -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLKV4Y3NM4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-JLKV4Y3NM4');
+    </script>
 
     <script>
         tailwind.config = {

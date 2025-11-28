@@ -3,6 +3,10 @@
 @section('title','Thank You')
 
 @section('content')
+    <!-- Event snippet for Submit lead form conversion page -->
+    <script>
+        gtag('event', 'conversion', {'send_to': 'AW-17629059969/fHHzCM7bg6gbEIG3mNZB'});
+    </script>
 <section class="w-full text-center py-28">
     <h1 class="text-4xl font-bold text-green-600 mb-4">Thank You!</h1>
     <p class="text-gray-700 text-lg mb-6">Your information has been submitted successfully.</p>
