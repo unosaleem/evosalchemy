@@ -3,7 +3,7 @@
 @section('title','Thank You')
 
 @section('content')
-    <!-- Event snippet for Submit lead form conversion page UG -->
+    <!-- Event snippet for Submit lead form conversion page -->
     <script>
         gtag('event', 'conversion', {'send_to': 'AW-17629059969/fHHzCM7bg6gbEIG3mNZB'});
     </script>

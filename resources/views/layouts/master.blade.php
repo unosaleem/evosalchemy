@@ -39,7 +39,7 @@
 
 
 
-<!-- GA4 gtag -->
+<!-- GA4 gtag Dynamic-->
 @if (!empty(env('GA4_MEASUREMENT_ID')))
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GA4_MEASUREMENT_ID') }}"></script>
 <script>
@@ -68,6 +68,7 @@
                    src="https://www.facebook.com/tr?id=713466354658200&ev=PageView&noscript=1"
         /></noscript>
     <!-- End Meta Pixel Code -->
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDLQ3D0EG4"></script>
     <script>
