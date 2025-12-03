@@ -219,7 +219,7 @@
                 Architectural Marvel
             </h2>
             <p class="text-slate-600 dark:text-slate-300 text-xl max-w-xl mx-auto lg:mx-0 mb-8 font-light">
-                DESIGNED BY THE RENOWNED SANJAY PURI.
+                Designed by the remowned Architect Sanjay Puri
             </p>
             <p>
                 Evos Alchemy, nestled in Patia’s posh neighbourhood, rises majestically with its 42/43-storey,
@@ -391,7 +391,7 @@
             <div id="floor-plan-carousel" class="carousel-container flex space-x-6 pb-4 md:space-x-8">
                 <!-- Unit Type 1: 3 BHK -->
                 <div
-                        onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 3 BHK Residences"
+                        onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 3 BHK "
                         class="min-w-[80%] sm:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.33rem)] bg-white dark:bg-secondary-dark rounded-xl reveal-element transition duration-300 hover:shadow-accent-gold/50"
                 >
                     <img
@@ -402,12 +402,12 @@
                     />
                     <div class="p-6 text-center dark:bg-accent-dark">
                         <h3 class="text-2xl font-bold text-secondary-dark dark:text-white mb-2">
-                            3 BHK Residences
+                            3BHK
                         </h3>
                         <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm">1,800 - 2,200 sq. ft.</p>
                         <a
                                 href="javascript:void(0);"
-                                onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 3 BHK Residences"
+                                onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 3 BHK"
                                 class="inline-block px-10 py-3 bg-accent-gold text-white font-semibold rounded-2xl shadow-lg hover:bg-yellow-500 hover:text-gray-900 transition duration-300 animate-[float_3s_ease-in-out_infinite]"
                         >
                             Check Floor Plans & Pricing
@@ -416,24 +416,24 @@
                 </div>
                 <!-- Unit Type 2: 3.5 BHK -->
                 <div
-                        onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 3.5 BHK Residences"
+                        onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section|  3+S BHK"
                         class="min-w-[80%] sm:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.33rem)] bg-white dark:bg-secondary-dark rounded-xl reveal-element transition duration-300 hover:shadow-accent-gold/50"
                         style="transition-delay: 0.1s"
                 >
                     <img
                             src="https://evosalchemy.com/wp-content/uploads/elementor/thumbs/07_pop-1-qji59zq3zpuxfq7daesllg95nsnb4cmk6yrj5hsvns.jpg"
-                            alt="3.5 BHK Floor Plan"
+                            alt=" 3+S BHK"
                             class="w-full h-auto rounded-t-xl object-cover"
                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/f8fafc/475569?text=3.5+BHK+Floor+Plan';"
                     />
                     <div class="p-6 text-center dark:bg-accent-dark">
                         <h3 class="text-2xl font-bold text-secondary-dark dark:text-white mb-2">
-                            3.5 BHK Suites
+                             3+S BHK
                         </h3>
                         <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm">2,500 - 3,000 sq. ft.</p>
                         <a
                                 href="javascript:void(0);"
-                                onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 3.5 BHK Residences"
+                                onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 3+S BHK"
                                 class="inline-block px-10 py-3 bg-accent-gold text-white font-semibold rounded-2xl shadow-lg hover:bg-yellow-500 hover:text-gray-900 transition duration-300 animate-[float_3s_ease-in-out_infinite]"
                         >
                             Check Floor Plans & Pricing
@@ -442,7 +442,7 @@
                 </div>
                 <!-- Unit Type 3: 4 BHK -->
                 <div
-                        onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 4 BHK Residences"
+                        onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 4+S BHK"
                         class="min-w-[80%] sm:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.33rem)] bg-white dark:bg-secondary-dark rounded-xl reveal-element transition duration-300 hover:shadow-accent-gold/50"
                         style="transition-delay: 0.2s"
                 >
@@ -454,12 +454,12 @@
                     />
                     <div class="p-6 text-center dark:bg-accent-dark">
                         <h3 class="text-2xl font-bold text-secondary-dark dark:text-white mb-2">
-                            4 BHK Sky Homes
+                            4+S BHK
                         </h3>
                         <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm">3,200 - 3,800 sq. ft.</p>
                         <a
                                 href="javascript:void(0);"
-                                onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 4 BHK Residences"
+                                onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 4+S BHK"
                                 class="inline-block px-10 py-3 bg-accent-gold text-white font-semibold rounded-2xl shadow-lg hover:bg-yellow-500 hover:text-gray-900 transition duration-300 animate-[float_3s_ease-in-out_infinite]"
                         >
                             Check Floor Plans & Pricing
@@ -468,7 +468,7 @@
                 </div>
                 <!-- Unit Type 4: 4.5 BHK Penthouse -->
                 <div
-                        onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 4.5 BHK Residences"
+                        onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| Residences"
                         class="min-w-[80%] sm:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.33rem)] bg-white dark:bg-secondary-dark rounded-xl reveal-element transition duration-300 hover:shadow-accent-gold/50"
                         style="transition-delay: 0.3s"
                 >
@@ -480,14 +480,14 @@
                     />
                     <div class="p-6 text-center dark:bg-accent-dark">
                         <h3 class="text-2xl font-bold text-secondary-dark dark:text-white mb-2">
-                            4.5 BHK Penthouses
+                            Residences
                         </h3>
                         <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm">
-                            3,500 - 4,500 sq. ft. | Grand Sundecks
+                            3,500 - 4,500 sq. ft.
                         </p>
                         <a
                                 href="javascript:void(0);"
-                                onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| 4.5 BHK Residences"
+                                onclick="openRequestCallModal(this)" data-remark="Check Floor Plans & Pricing | Floor Plans Section| Residences"
                                 class="inline-block px-10 py-3 bg-accent-gold text-white font-semibold rounded-2xl shadow-lg hover:bg-yellow-500 hover:text-gray-900 transition duration-300 animate-[float_3s_ease-in-out_infinite]"
                         >
                             Check Floor Plans & Pricing
@@ -642,13 +642,13 @@
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div onclick="openRequestCallModal(this)" data-remark="Cloud Walkway | Amenities Section" class="amenity-card">
+                    <div onclick="openRequestCallModal(this)" data-remark="Boulevard Bridge | Amenities Section" class="amenity-card">
                         <img
                                 class="w-full h-64 object-cover"
                                 src="assets/images/amenities/walkway.webp"
                                 alt="Cafeteria"
                         />
-                        <span class="amenity-label">Cloud Walkway</span>
+                        <span class="amenity-label">Boulevard Bridge</span>
                     </div>
 
                     <div onclick="openRequestCallModal(this)" data-remark="Fitness Center | Amenities Section" class="amenity-card">
@@ -744,13 +744,13 @@
                         <span class="amenity-label">Sauna</span>
                     </div>
 
-                    <div onclick="openRequestCallModal(this)" data-remark="Meditation | Amenities Section" class="amenity-card">
+                    <div onclick="openRequestCallModal(this)" data-remark="Meditation Deck | Amenities Section" class="amenity-card">
                         <img
                                 class="w-full h-64 object-cover"
                                 src="assets/images/amenities/meditation.webp"
-                                alt="Meditation"
+                                alt="Meditation Deck"
                         />
-                        <span class="amenity-label">Meditation</span>
+                        <span class="amenity-label">Meditation Deck</span>
                     </div>
                 </div>
             </div>
